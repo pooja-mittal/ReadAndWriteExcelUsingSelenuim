@@ -60,7 +60,7 @@ public class TCForLoginPage {
 	@Test(priority = 3)
 	public void validEmailPwdBlank() {
 		InitLoginPage loginDetail = new InitLoginPage(driver);
-		loginDetail.setUserName("pooja.mittal30@gmail.com");
+		loginDetail.setUserName("enter email");
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		loginDetail.clickContinue();
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -75,7 +75,7 @@ public class TCForLoginPage {
 	@Test(priority = 4, dependsOnMethods = { "validEmailPwdBlank" })
 	public void validEmailPwdInvalid() {
 		InitLoginPage loginDetail = new InitLoginPage(driver);
-		// loginDetail.setUserName("pooja.mittal30@gmail.com");
+		// loginDetail.setUserName("enter email");
 		// driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		// loginDetail.clickContinue();
 		// driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -92,11 +92,11 @@ public class TCForLoginPage {
 		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		InitLoginPage loginDetail = new InitLoginPage(driver);
-		// loginDetail.setUserName("pooja.mittal30@gmail.com");
+		// loginDetail.setUserName("enter email");
 		// driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		// loginDetail.clickContinue();
 		// driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		loginDetail.setPwd("pnzphpnm");
+		loginDetail.setPwd("pwd");
 		loginDetail.clickSubmit();
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		Assert.assertEquals(driver.findElement(By.className("nav-logo-link")).getText(), "Amazon");
